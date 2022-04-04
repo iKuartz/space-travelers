@@ -4,15 +4,17 @@ import Rockets from './components/Rockets';
 import Profiles from './components/Profiles';
 import Missions from './components/Missions';
 
-const App = () => (
-  <BrowserRouter>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Rockets />} />
-      <Route path="/missions" element={<Missions />} />
-      <Route path="/profile" element={<Profiles />} />
-    </Routes>
-  </BrowserRouter>
-);
+function App() {
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Rockets />} />
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/profiles" element={<Profiles />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
 export default App;
