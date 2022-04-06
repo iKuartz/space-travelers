@@ -9,6 +9,15 @@ export default function Missions() {
     dispatch(fetchMissions());
   }, []);
   const missions = useSelector((state) => state.missions);
-  console.log(missions);
-  return <div />;
+  return (
+    <div>
+      {missions.map((mission) => (
+        <div key={mission.id}>
+          <h2>{mission.name}</h2>
+          <p>{mission.description}</p>
+          <input type="checkbox" checked="{mission.reserved}" />
+        </div>
+      ))}
+    </div>
+  );
 }
