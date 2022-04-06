@@ -7,7 +7,7 @@ export default function Header() {
     <nav>
       <div>
         <img src={logo} alt="Planet logo" />
-        <h1>Space Travelers`&apos;` Hub</h1>
+        <h1>Space Travelers&apos; Hub</h1>
       </div>
       <ul>
         <li>
