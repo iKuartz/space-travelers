@@ -15,7 +15,7 @@ export default function Missions() {
         <div key={mission.id}>
           <h2>{mission.name}</h2>
           <p>{mission.description}</p>
-          <p>{mission.reserved}</p>
+          <input type="checkbox" checked="{mission.reserved}" />
         </div>
       ))}
     </div>
