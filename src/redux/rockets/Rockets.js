@@ -16,6 +16,7 @@ export default function rocketsReducer(state = [], action) {
         rocketList.push({
           id: rocket.rocket_id,
           name: rocket.rocket_name,
+          description: rocket.description,
           type: rocket.rocket_type,
           img: rocket.flickr_images[0],
         });
