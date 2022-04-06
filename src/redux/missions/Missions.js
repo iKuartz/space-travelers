@@ -16,7 +16,7 @@ function missionsReducer(state = [], action) {
         missionList.push({
           id: mission.mission_id,
           name: mission.mission_name,
-          type: mission.mission_type,
+          description: mission.description,
         });
       });
       return missionList;
