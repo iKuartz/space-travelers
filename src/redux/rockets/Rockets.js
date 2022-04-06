@@ -6,16 +6,20 @@ export const fetchRockets = () => async (dispatch) => {
   dispatch({ type: FETCH_ROCKETS, data });
 };
 
-export const rocketsReducer = (state = [], action) => {
+export default function rocketsReducer(state = [], action) {
   const rocketList = [];
   switch (action.type) {
     default: return state;
 
     case FETCH_ROCKETS:
       action.data.forEach((rocket) => {
-        rocketList.push(rocket);
+        rocketList.push({
+          id: rocket.rocket_id,
+          name: rocket.rocket_name,
+          type: rocket.rocket_type,
+          img: rocket.flickr_images[0],
+        });
       });
-      console.log(rocketList);
       return rocketList;
   }
-};
+}
