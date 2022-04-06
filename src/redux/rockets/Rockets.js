@@ -1,10 +1,14 @@
-import { FETCH_ROCKETS } from '../actionTypes';
+import { FETCH_ROCKETS, BOOK_ROCKET } from '../actionTypes';
 
 export const fetchRockets = () => async (dispatch) => {
   const response = await fetch('https://api.spacexdata.com/v3/rockets');
   const data = await response.json();
   dispatch({ type: FETCH_ROCKETS, data });
 };
+
+export function bookRocket(id) {
+  return ({ type: BOOK_ROCKET, id });
+}
 
 export default function rocketsReducer(state = [], action) {
   const rocketList = [];
@@ -19,8 +23,12 @@ export default function rocketsReducer(state = [], action) {
           description: rocket.description,
           type: rocket.rocket_type,
           img: rocket.flickr_images[0],
+          booked: false,
         });
       });
       return rocketList;
+
+    case BOOK_ROCKET:
+      
   }
 }
