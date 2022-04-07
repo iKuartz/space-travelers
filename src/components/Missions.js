@@ -27,7 +27,7 @@ export default function Missions() {
       {missions.map((mission) => (
         <div key={mission.id}>
           <h2>{mission.name}</h2>
-          {mission.joined && <p>Joined!</p>}
+          {mission.joined ? <p>Active Member</p> : <p>NOT A MEMBER</p>}
           <p>{mission.description}</p>
           <input type='checkbox' checked='{mission.reserved}' />
           {mission.joined ? (
