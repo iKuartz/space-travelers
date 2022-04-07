@@ -1,4 +1,6 @@
-import { FETCH_ROCKETS, BOOK_ROCKET } from '../actionTypes';
+import { FETCH_ROCKETS, BOOK_ROCKET, CANCEL_ROCKET } from '../actionTypes';
+
+// Action creators
 
 export const fetchRockets = () => async (dispatch) => {
   const response = await fetch('https://api.spacexdata.com/v3/rockets');
@@ -10,8 +12,14 @@ export function bookRocket(id) {
   return ({ type: BOOK_ROCKET, id });
 }
 
+export function cancelRocket(id) {
+  return ({ type: CANCEL_ROCKET, id });
+}
+
+// Reducer
+
 export default function rocketsReducer(state = [], action) {
-  const rocketList = [];
+  let rocketList = [];
   switch (action.type) {
     default: return state;
 
@@ -29,6 +37,17 @@ export default function rocketsReducer(state = [], action) {
       return rocketList;
 
     case BOOK_ROCKET:
-      
+      rocketList = state.map((rocket) => {
+        if (rocket.id !== action.id) return rocket;
+        return { ...rocket, boocked: true };
+      });
+      return rocketList;
+
+    case CANCEL_ROCKET:
+      rocketList = state.map((rocket) => {
+        if (rocket.id !== action.id) return rocket;
+        return { ...rocket, boocked: false };
+      });
+      return rocketList;
   }
 }
