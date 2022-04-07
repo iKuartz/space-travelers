@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import {
   fetchMissions,
+  joinMission,
   leaveMission,
-  missionsReducer,
 } from '../redux/missions/Missions';
 
 export default function Missions() {
@@ -15,11 +15,11 @@ export default function Missions() {
   const missions = useSelector((state) => state.missions);
 
   const handleJoining = (id) => {
-    dispatch(bookMission(id));
+    dispatch(joinMission(id));
   };
 
   const handleCanceling = (id) => {
-    dispatch(cancelMission(id));
+    dispatch(leaveMission(id));
   };
 
   return (
