@@ -1,4 +1,4 @@
-import { FETCH_MISSIONS, JOIN_MISSION, LEAVE_MISSION } from "../actionTypes";
+import { FETCH_MISSIONS, JOIN_MISSION, LEAVE_MISSION } from '../actionTypes';
 
 // Action creators
 
@@ -17,7 +17,7 @@ function leaveMission(id) {
 }
 
 function missionsReducer(state = [], action) {
-  const missionList = [];
+  let missionList = [];
   switch (action.type) {
     default:
       return state;
@@ -28,7 +28,7 @@ function missionsReducer(state = [], action) {
           id: mission.mission_id,
           name: mission.mission_name,
           description: mission.description,
-          joined: false
+          joined: false,
         });
       });
       return missionList;
@@ -49,4 +49,6 @@ function missionsReducer(state = [], action) {
   }
 }
 
-export { fetchMissions, missionsReducer, joinMission, leaveMission };
+export {
+  fetchMissions, missionsReducer, joinMission, leaveMission,
+};
