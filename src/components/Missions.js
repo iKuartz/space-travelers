@@ -29,7 +29,6 @@ export default function Missions() {
           <h2>{mission.name}</h2>
           {mission.joined ? <p>Active Member</p> : <p>NOT A MEMBER</p>}
           <p>{mission.description}</p>
-          <input type="checkbox" checked="{mission.reserved}" />
           {mission.joined ? (
             <button onClick={() => handleCanceling(mission.id)} type="button">
               Leave mission
