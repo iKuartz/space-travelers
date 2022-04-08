@@ -4,6 +4,7 @@ import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import Profiles from './components/Profiles';
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 
 function App() {

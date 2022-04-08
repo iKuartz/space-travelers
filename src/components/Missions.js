@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import {
   fetchMissions,
   joinMission,
   leaveMission,
-} from '../redux/missions/Missions';
+} from "../redux/missions/Missions";
 
 export default function Missions() {
   const dispatch = useDispatch();
@@ -24,22 +24,56 @@ export default function Missions() {
 
   return (
     <div>
-      {missions.map((mission) => (
-        <div key={mission.id}>
-          <h2>{mission.name}</h2>
-          {mission.joined ? <p>Active Member</p> : <p>NOT A MEMBER</p>}
-          <p>{mission.description}</p>
-          {mission.joined ? (
-            <button onClick={() => handleCanceling(mission.id)} type="button">
-              Leave mission
-            </button>
-          ) : (
-            <button onClick={() => handleJoining(mission.id)} type="button">
-              Join mission
-            </button>
-          )}
-        </div>
-      ))}
+      <table className='table-bordered table-striped table-hover'>
+        <thead>
+          <tr className='fs-5'>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <tr key={mission.id}>
+              <td className='fs-5 fw-bold'>{mission.name}</td>
+              <td>{mission.description}</td>
+              {mission.joined ? (
+                <td>
+                  <span className='badge squared-pill bg-primary text-light'>
+                    Active Member
+                  </span>
+                </td>
+              ) : (
+                <td>
+                  <span className='badge squared-pill bg-secondary text-light'>
+                    NOT A MEMBER
+                  </span>
+                </td>
+              )}
+              <td>
+                {mission.joined ? (
+                  <button
+                    className='btn btn-outline-secondary'
+                    onClick={() => handleCanceling(mission.id)}
+                    type='button'
+                  >
+                    Leave mission
+                  </button>
+                ) : (
+                  <button
+                    className='btn btn-outline-secondary'
+                    onClick={() => handleJoining(mission.id)}
+                    type='button'
+                  >
+                    Join mission
+                  </button>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
