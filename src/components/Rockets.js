@@ -22,8 +22,11 @@ export default function Rockets() {
         <div key={rocket.id}>
           <img src={rocket.img} alt={`rocket named: ${rocket.name}`} />
           <h1>{rocket.name}</h1>
-          {rocket.booked && <p>Booked</p>}
-          <p>{rocket.description}</p>
+          <p>
+            {rocket.booked && 'Booked'}
+            {' '}
+            {rocket.description}
+          </p>
           <p>
             type:
             {rocket.type}
