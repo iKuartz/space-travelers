@@ -14,7 +14,6 @@ nav {
 .title {
   align-items: center;
   display: flex;
-  font-size: auto;
   white-space: nowrap;
   width: 40%;
   gap: 20px;

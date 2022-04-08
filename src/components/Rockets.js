@@ -34,11 +34,11 @@ export default function Rockets() {
               {rocket.description}
             </p>
             {rocket.booked ? (
-              <button className="btn rocketButton" onClick={() => handleCanceling(rocket.id)} type="button">
+              <button className="rocketButton" onClick={() => handleCanceling(rocket.id)} type="button">
                 Cancel reservation
               </button>
             ) : (
-              <button className="btn rocketButton" onClick={() => handleBooking(rocket.id)} type="button">
+              <button className="rocketButton" onClick={() => handleBooking(rocket.id)} type="button">
                 Reserve rocket
               </button>
             )}
