@@ -25,7 +25,7 @@ export default function Missions() {
   return (
     <div>
       <table className="table-bordered table-striped table-hover">
-        <thead className="padding-top-10">
+        <thead>
           <tr className="fs-5">
             <th>Mission</th>
             <th>Description</th>
