@@ -1,0 +1,20 @@
+.profileContainer {
+  padding-top: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.list {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.list > li {
+  border-bottom: 1px solid grey;
+  padding: 30px;
+}
+
+.list > li:last-child {
+  border: none;
+}

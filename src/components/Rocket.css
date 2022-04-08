@@ -1,0 +1,39 @@
+.rocketContainer {
+  padding-top: 100px;
+  margin: 0;
+}
+
+.rocket {
+  max-width: 100%;
+  height: 250px;
+  display: flex;
+  padding: 20px 40px;
+  gap: 20px;
+}
+
+.rocketImg {
+  width: 300px;
+}
+
+.rocketTxt {
+  max-width: calc(100% - 380px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+i {
+  color: white;
+  background-color: rgb(3, 175, 184);
+  padding: 0 8px;
+  border-radius: 8px;
+}
+
+.rocketButton {
+  align-self: flex-start;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+}
