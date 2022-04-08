@@ -1,0 +1,29 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 -2px 20px 0 rgb(0 0 0 / 50%);
+  padding: 15px 40px;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  width: 40%;
+  gap: 20px;
+}
+
+.logo {
+  max-width: 50px;
+}
+
+.navLinks {
+  justify-content: space-around;
+  width: 40%;
+  display: flex;
+  color: blue;
+}
