@@ -2,6 +2,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100vw;
+  max-height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,6 +14,8 @@ nav {
 .title {
   align-items: center;
   display: flex;
+  font-size: auto;
+  white-space: nowrap;
   width: 40%;
   gap: 20px;
 }
