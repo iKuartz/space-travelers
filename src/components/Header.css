@@ -11,6 +11,10 @@ nav {
   padding: 15px 40px;
 }
 
+a:active{
+  text-decoration: underline;
+}
+
 .title {
   align-items: center;
   display: flex;
@@ -28,4 +32,8 @@ nav {
   width: 40%;
   display: flex;
   color: blue;
+}
+
+.active-link {
+  text-decoration: underline;
 }

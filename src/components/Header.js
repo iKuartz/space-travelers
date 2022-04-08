@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './Header.css';
 
@@ -13,19 +13,37 @@ export default function Header() {
       </div>
       <ul className="navLinks">
         <li>
-          <Link to="/">
+          <NavLink
+            to="/"
+            className={({ isActive }) => {
+              if (isActive) return 'active-link';
+              return '';
+            }}
+          >
             Rockets
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/missions">
+          <NavLink
+            to="/missions"
+            className={({ isActive }) => {
+              if (isActive) return 'active-link';
+              return '';
+            }}
+          >
             Missions
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/profiles">
+          <NavLink
+            to="/profiles"
+            className={({ isActive }) => {
+              if (isActive) return 'active-link';
+              return '';
+            }}
+          >
             Profiles
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
