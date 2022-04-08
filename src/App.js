@@ -4,6 +4,8 @@ import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import Profiles from './components/Profiles';
 
+import './App.css';
+
 function App() {
   return (
     <BrowserRouter>
