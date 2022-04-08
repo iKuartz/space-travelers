@@ -6,17 +6,17 @@
 > The Missions section displays a list of current missions along with their brief description and participation status. There is also a button next to each mission that allows users to join the selected mission or leave the mission the user joined earlier.
 > The My Profile section displays all reserved rockets and space missions.
 
-<!-- ![screenshot](src/images/bookstore.png) -->
+<!-- ![screenshot](src/assets/screenshot.png) -->
 
 ## Live Demo
 
-[Coming Soon on this address!](https://bookstore-react-redux-microverse.app) Check back often to see our project growing, or
+[Coming Soon on this address!](https://space-travelers-microverse-project.netlify.app/) Check back often to see our project growing, or
 visit the [project's GitHub](https://github.com/iKuartz/space-travel) to look at its evolution commit by commit :)
 
 ## Built With
 
 - Languages: HTML, CSS and JS
-- Tools: React, Redux, Webpack, NPM, Jest
+- Tools: React, Redux, Bootstrap, Webpack, NPM, Jest
 
 ## Getting Started
 
@@ -29,15 +29,20 @@ Clone
 Run
 
 ```sh
-   cd bookstore
+   cd space-travel
    npm install
    npm start
 ```
 ## Author
-### Ivan Silva
 
+### 👤 Ivan Silva
 - GitHub: [github.com/iKuartz](https://github.com/iKuartz)
 - LinkedIn: [linkedin.com/in/ivan-silva](https://www.linkedin.com/in/ivan-silva-a47058b3/)
+
+### 👤 Joaquin Garrido Lecca Zanetti
+- GitHub: [@Kakalanp](https://github.com/Kakalanp)
+- LinkedIn: [Joaquin Garrido Lecca Zanetti](https://www.linkedin.com/in/joaquín-garrido-lecca-zanetti-623583204)
+- Twitter: [@LeccaJoaquin](https://twitter.com/LeccaJoaquin) 
 
 ## Contributing
 
