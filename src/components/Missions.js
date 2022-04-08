@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import {
   fetchMissions,
+  joinMission,
   leaveMission,
-  missionsReducer,
-} from "../redux/missions/Missions";
+} from '../redux/missions/Missions';
 
 export default function Missions() {
   const dispatch = useDispatch();
@@ -15,11 +15,11 @@ export default function Missions() {
   const missions = useSelector((state) => state.missions);
 
   const handleJoining = (id) => {
-    dispatch(bookMission(id));
+    dispatch(joinMission(id));
   };
 
   const handleCanceling = (id) => {
-    dispatch(cancelMission(id));
+    dispatch(leaveMission(id));
   };
 
   return (
@@ -29,13 +29,12 @@ export default function Missions() {
           <h2>{mission.name}</h2>
           {mission.joined ? <p>Active Member</p> : <p>NOT A MEMBER</p>}
           <p>{mission.description}</p>
-          <input type='checkbox' checked='{mission.reserved}' />
           {mission.joined ? (
-            <button onClick={() => handleCanceling(mission.id)} type='button'>
+            <button onClick={() => handleCanceling(mission.id)} type="button">
               Leave mission
             </button>
           ) : (
-            <button onClick={() => handleJoining(mission.id)} type='button'>
+            <button onClick={() => handleJoining(mission.id)} type="button">
               Join mission
             </button>
           )}

@@ -1,4 +1,4 @@
-import { FETCH_MISSIONS, JOIN_MISSION, LEAVE_MISSION } from "../actionTypes";
+import { FETCH_MISSIONS, JOIN_MISSION, LEAVE_MISSION } from '../actionTypes';
 
 // Action creators
 
@@ -17,21 +17,24 @@ function leaveMission(id) {
 }
 
 function missionsReducer(state = [], action) {
-  const missionList = [];
+  let missionList = [];
   switch (action.type) {
     default:
       return state;
 
     case FETCH_MISSIONS:
-      action.data.forEach((mission) => {
-        missionList.push({
-          id: mission.mission_id,
-          name: mission.mission_name,
-          description: mission.description,
-          joined: false
+      if (state.length === 0) {
+        action.data.forEach((mission) => {
+          missionList.push({
+            id: mission.mission_id,
+            name: mission.mission_name,
+            description: mission.description,
+            joined: false,
+          });
         });
-      });
-      return missionList;
+        return missionList;
+      }
+      return state;
 
     case JOIN_MISSION:
       missionList = state.map((mission) => {
@@ -49,4 +52,6 @@ function missionsReducer(state = [], action) {
   }
 }
 
-export { fetchMissions, missionsReducer, joinMission, leaveMission };
+export {
+  fetchMissions, missionsReducer, joinMission, leaveMission,
+};

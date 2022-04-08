@@ -24,17 +24,19 @@ export default function rocketsReducer(state = [], action) {
     default: return state;
 
     case FETCH_ROCKETS:
-      action.data.forEach((rocket) => {
-        rocketList.push({
-          id: rocket.rocket_id,
-          name: rocket.rocket_name,
-          description: rocket.description,
-          type: rocket.rocket_type,
-          img: rocket.flickr_images[0],
-          booked: false,
+      if (state.length === 0) {
+        action.data.forEach((rocket) => {
+          rocketList.push({
+            id: rocket.rocket_id,
+            name: rocket.rocket_name,
+            description: rocket.description,
+            type: rocket.rocket_type,
+            img: rocket.flickr_images[0],
+            booked: false,
+          });
         });
-      });
-      return rocketList;
+        return rocketList;
+      } return state;
 
     case BOOK_ROCKET:
       rocketList = state.map((rocket) => {

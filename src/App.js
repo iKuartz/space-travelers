@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Rockets from './components/Rockets';
-// import Profiles from './components/Profiles';
 import Missions from './components/Missions';
+import Profiles from './components/Profiles';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
+        <Route path="/profiles" element={<Profiles />} />
       </Routes>
     </BrowserRouter>
   );
