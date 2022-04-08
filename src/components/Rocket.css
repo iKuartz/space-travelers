@@ -7,14 +7,12 @@
   max-width: 100%;
   height: 250px;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   padding: 20px 40px;
   gap: 20px;
 }
 
 .rocketImg {
-  max-width: 300px;
+  width: 300px;
 }
 
 .rocketTxt {
