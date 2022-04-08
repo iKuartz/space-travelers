@@ -14,10 +14,11 @@
 }
 
 .rocketImg {
-  max-width: 25%;
+  max-width: 300px;
 }
 
 .rocketTxt {
+  max-width: calc(100% - 380px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
