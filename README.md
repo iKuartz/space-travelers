@@ -36,8 +36,8 @@ Run
 ## Author
 
 ### 👤 Ivan Silva
-- GitHub: [github.com/iKuartz](https://github.com/iKuartz)
-- LinkedIn: [linkedin.com/in/ivan-silva](https://www.linkedin.com/in/ivan-silva-a47058b3/)
+- GitHub: [iKuartz](https://github.com/iKuartz)
+- LinkedIn: [Ivan Barbosa da Silva](https://www.linkedin.com/in/ivan-silva-a47058b3/)
 
 ### 👤 Joaquin Garrido Lecca Zanetti
 - GitHub: [@Kakalanp](https://github.com/Kakalanp)
