@@ -23,15 +23,18 @@ function missionsReducer(state = [], action) {
       return state;
 
     case FETCH_MISSIONS:
-      action.data.forEach((mission) => {
-        missionList.push({
-          id: mission.mission_id,
-          name: mission.mission_name,
-          description: mission.description,
-          joined: false,
+      if (state.length === 0) {
+        action.data.forEach((mission) => {
+          missionList.push({
+            id: mission.mission_id,
+            name: mission.mission_name,
+            description: mission.description,
+            joined: false,
+          });
         });
-      });
-      return missionList;
+        return missionList;
+      }
+      return state;
 
     case JOIN_MISSION:
       missionList = state.map((mission) => {
